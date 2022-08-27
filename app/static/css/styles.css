@@ -1,0 +1,38 @@
+/* Je réalise désormais le CSS pour mon application mobile */
+
+/* CSS d'ordre général */
+
+body {
+
+    background-color: rgb(141, 141, 189);
+    font-family: "Lato", sans-serif;
+
+}
+
+/* CSS du header */
+
+.header__title {
+    font-size: 45px;
+    height: 220px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
+    text-shadow: 1px 3px 2px black;
+    color: white;
+    line-height: 1.2em;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-image: url('https://www.lacremedugaming.fr/wp-content/uploads/creme-gaming/2022/02/media-4540.jpg');
+}
+
+/* CSS du footer */
+.footer__author {
+    background-color: rgb(58, 37, 37);
+    color: white;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    line-height: 1.5em;
+}
