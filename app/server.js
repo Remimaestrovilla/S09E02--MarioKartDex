@@ -2,6 +2,10 @@
 
 const express = require ('express');
 
+// J'ai aussi besoin du dotenv ! Pour les variables d'environnement, je part le chercher
+
+const dotenv = require ('dotenv');
+
 // J'aurai aussi besoin du router que j'ai crée un peu plus tot pour que tout soit d'equerre
 
 const router = require ('./router');
@@ -14,9 +18,13 @@ const app = express();
 
 const path = require ('path');
 
-// Il faut que j'assigne un port à mon application, on décide que par défaut, le site tournera sur le port 3006 
+// Je configure mon environnement personnel de sorte à ce que le serveur s'ouvre sur le port que j'ai choisi par moi même 
 
-const PORT = 3006;
+dotenv.config();
+
+// Il faut que j'assigne un port à mon application, on décide que par défaut, le site tournera sur le port 3003 
+
+const PORT = process.env.PORT || 3002;
 
 // Je vais maintenant chercher toutes mes vues ! Dans un premier temps, je précise que je cherche des views qui sont dans le dossier du même nom
 

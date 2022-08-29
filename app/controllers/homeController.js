@@ -1,5 +1,7 @@
 // Ici, je réalise un controlleur pour insérer toute la logique qui sera présente sur la page d'accueil de mon application mobile
 
+const datamapper = require ('../../models/datamapper');
+
 const homeController = {
 
     // Je réalise la méthode qui servira juste à afficher la page d'accueil de mon projet. J'appelle la méthode home pour que cela soit cohérent.
