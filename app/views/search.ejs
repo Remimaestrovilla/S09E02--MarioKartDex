@@ -1,0 +1,175 @@
+<!-- Je sais que le code de mon Header va se répéter sur toute les pages, on le factorise donc avec la syntaxe EJS -->
+
+<%- include ('partials/header') %>
+
+    <p class="paragraph__explanation"> Vous cherchez une ou plusieurs cartes en particulier ? Faites vous plaisir ! </p>
+
+    <p class="paragraph__explanation__two"> Personnages </p>
+
+    <main class="main__characters__choose">
+
+        <div class="main__characters__choose__section">
+
+            <h3>Type</h3>
+
+    <form action="/search/type" method="get">
+
+        <select name="type" id="type">
+
+            <option value="Humain">Humain</option>
+
+            <option value="Princesse">Princesse</option>
+
+            <option value="Carapace">Carapace</option>
+
+            <option value="Dinosaure">Dinosaure</option>
+
+            <option value="Champignon">Champignon</option>
+
+            <option value="Singe">Singe</option>
+
+            <option value="Fantome">Fantome</option>
+
+            <option value="Special">Special</option>
+
+            <option value="Vol">Vol</option>
+
+            <option value="Explosif">Explosif</option>
+
+        </select>
+
+        <input type="submit" value="Trier" class="form__button">
+
+    </form>
+
+        </div>
+    
+    <!-- Je veux que mes utilisateurs chosissent selon le nombre total d'apparition du personnage -->
+
+    <div class="main__characters__choose__section">
+
+        <h3>Nombre d'apparition</h3>
+
+        <form action="/search/apparition" method="get">
+    
+            <input type="number" name="apparition" id="apparition" min=0 max=14 value=0>
+    
+            <input type="submit" value="Trier" class="form__button">
+    
+        </form>
+
+    </div>
+
+    <!-- Je veux que mes utilisateurs choisissent selon la premiere apparition du personnage -->
+
+    <div class="main__characters__choose__section">
+
+        <h3>Première apparition</h3>
+
+        <form action="/search/first_apparition" method="get">
+   
+            <select name="first_apparition" id="first_apparition">
+    
+                <option value="Super Mario Kart">Super Mario Kart</option>
+    
+                <option value="Mario Kart 64">Mario Kart 64</option>
+    
+                <option value="Mario Kart Super Circuit">Mario Kart Super Circuit</option>
+    
+                <option value="Mario Kart Double Dash">Mario Kart Double Dash</option>
+    
+                <option value="Mario Kart DS">Mario Kart DS</option>
+    
+                <option value="Mario Kart Wii">Mario Kart Wii</option>
+    
+                <option value="Mario Kart 7">Mario Kart 7</option>
+    
+                <option value="Mario Kart 8">Mario Kart 8</option>
+    
+                <option value="Mario Kart 8 Deluxe">Mario Kart 8 Deluxe</option>
+    
+                <option value="Mario Kart Tour">Mario Kart Tour</option>
+    
+                <option value="Mario Kart Arcade GP">Mario Kart Arcade GP</option>
+    
+                <option value="Mario Kart Arcade GP2">Mario Kart Arcade GP2</option>
+    
+                <option value="Mario Kart Arcade GP DX">Mario Kart Arcade GP DX</option>
+    
+                <option value="Mario Kart Arcade GP VR">Mario Kart Arcade GP VR</option>
+    
+            </select>
+    
+            <input type="submit" value="Trier" class="form__button">
+    
+        </form>
+
+    </div>
+  
+    <!-- Je veux que mes utilisateurs choisissent selon la dernière apparition du personnage -->
+
+    <div class="main__characters__choose__section">
+
+        <h3>Dernière apparition</h3>
+
+        <form action="/search/last_apparition" method="get">
+    
+            <select name="last_apparition" id="last_apparition">
+    
+                <option value="Super Mario Kart">Super Mario Kart</option>
+    
+                <option value="Mario Kart 64">Mario Kart 64</option>
+    
+                <option value="Mario Kart Super Circuit">Mario Kart Super Circuit</option>
+    
+                <option value="Mario Kart Double Dash">Mario Kart Double Dash</option>
+    
+                <option value="Mario Kart DS">Mario Kart DS</option>
+    
+                <option value="Mario Kart Wii">Mario Kart Wii</option>
+    
+                <option value="Mario Kart 7">Mario Kart 7</option>
+    
+                <option value="Mario Kart 8">Mario Kart 8</option>
+    
+                <option value="Mario Kart 8 Deluxe">Mario Kart 8 Deluxe</option>
+    
+                <option value="Mario Kart Tour">Mario Kart Tour</option>
+    
+                <option value="Mario Kart Arcade GP">Mario Kart Arcade GP</option>
+    
+                <option value="Mario Kart Arcade GP2">Mario Kart Arcade GP2</option>
+    
+                <option value="Mario Kart Arcade GP DX">Mario Kart Arcade GP DX</option>
+    
+                <option value="Mario Kart Arcade GP VR">Mario Kart Arcade GP VR</option>
+    
+            </select>
+    
+            <input type="submit" value="Trier" class="form__button">
+    
+        </form>
+
+    </div>
+  
+    <!-- Je veux que mes utilisateurs choisissent par nom -->
+
+    <div class="main__characters__choose__section">
+
+        <h3>Nom</h3>
+
+        <form action="/search/name" method="get">
+
+            <input type="text" name="name" id="name">
+    
+            <input type="submit" value="Trier" class="form__button">
+    
+        </form>
+
+    </div>
+   
+    </main>
+
+<!-- Je sais aussi que le footer va se répéter ! Alors on fait de même et on fout tout dans des partials appropriés pour faciliter la maintenance -->
+
+<%- include ('partials/footer') %>

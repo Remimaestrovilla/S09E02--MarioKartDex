@@ -4,15 +4,36 @@
 
 body {
 
-    background-color: rgb(141, 141, 189);
+    background-color: rgb(217, 217, 233);
     font-family: "Lato", sans-serif;
 
 }
 
 /* CSS du header */
 
+.header__nav__ahref {
+    text-decoration: none;
+    color: white;
+}
+
+.header__nav__ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-around;
+    border: 2px solid black;
+    background-color: rgb(58, 37, 37);
+}
+
+.header__nav__ul__li {
+    padding: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
 .header__title {
-    font-size: 45px;
+    font-size: 52px;
     height: 220px;
     text-align: center;
     background-repeat: no-repeat;
@@ -24,10 +45,11 @@ body {
     padding-top: 30px;
     padding-left: 10px;
     padding-right: 10px;
-    background-image: url('https://www.lacremedugaming.fr/wp-content/uploads/creme-gaming/2022/02/media-4540.jpg');
+    background-image: url('https://www.adam-et-ender.com/wp-content/uploads/2018/05/banniere_monopolygamer_mariokart.jpg');
 }
 
 /* CSS du footer */
+
 .footer__author {
     background-color: rgb(58, 37, 37);
     color: white;
@@ -35,4 +57,164 @@ body {
     padding: 10px;
     text-align: center;
     line-height: 1.5em;
+}
+
+/* CSS de la page d'accueil */
+
+.character__link {
+    text-decoration: none;
+}
+
+.img__add__card {
+    position: relative;
+    bottom: 360px;
+    left: 268px;
+    text-decoration: none;
+    color: white;
+}
+
+.img__add__card__explanation {
+    color: white;
+    background-color: rgb(4, 126, 4, 0.7);
+    border: 1px solid black;
+    font-size: 30px;
+    padding: 10px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.img__remove__card {
+    position: relative;
+    bottom: 360px;
+    left: 268px;
+    text-decoration: none;
+    color: white;
+}
+
+.img__remove__card__explanation {
+    color: white;
+    background-color: rgba(214, 36, 36, 0.952);
+    border: 1px solid black;
+    font-size: 30px;
+    padding: 10px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.img__contenair {
+    position: relative;
+}
+
+.img__contenair__name {
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 1px 3px 2px black;
+    color: white;
+    position: relative;
+    bottom: 64px;
+    left: 22px;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 8px;
+    width: 285px;
+}
+
+.img__contenair__number {
+    position: relative;
+    color: white;
+    bottom: 140px;
+    left: 285px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main__characters {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: center;
+}
+
+.main__characters__visual {
+    width: 280px;
+    height: 280px;
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid black;
+    background-color: lightgrey;
+}
+
+.paragraph__explanation {
+    padding: 20px;
+    line-height: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* CSS des pages paramétrées pour afficher les détails des personnages */
+
+.main__characters__details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main__character__features__list {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.main__characters__span {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.main__character__features__list__last {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* CSS de la page recherche */
+
+.form__button {
+    border: 2px solid red;
+ }
+
+.main__characters__chose {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.main__characters__choose__section {
+    margin: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: rgb(170, 111, 111);
+    color: white;
+    font-weight: bold;
+}
+
+.paragraph__explanation__two {
+    margin: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
 }

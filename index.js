@@ -2,6 +2,6 @@
 
 // Dans un premier temps, je vais réaliser un point d'entrée pour mon serveur
 
-require ('./server');
+require ('./app/server');
 
 // Le point d'entrée est réalisé, désormais, nous allons construire le serveur

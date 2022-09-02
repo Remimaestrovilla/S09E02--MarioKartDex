@@ -1,0 +1,41 @@
+<!-- Je sais que le code de mon Header va se répéter sur toute les pages, on le factorise donc avec la syntaxe EJS -->
+
+<%- include ('partials/header') %>
+
+    <p class="paragraph__explanation"> Voici les détails de la carte <%= character.name %> :</p>
+
+    <!-- Désormais je vais faire en sorte d'afficher toutes les caractéristiques des personnages -->
+
+    <main class="main__characters__details">
+
+        <div class="img__contenair">
+
+            <img src="/img/<%= character.visual_name %>" class="main__characters__visual">
+
+            <p class="img__contenair__name"><%= character.name %></p>
+            
+            <a class="img__add__card" title="Ajouter au deck" href="/favorite/add/<%= character.id %>"><p class="img__add__card__explanation">+</p></a>
+
+            <p class="img__contenair__number"><%= character.id %></p>
+            
+        </div>
+
+        <ul class="main__character__features">
+
+            <li class="main__character__features__list"> <span class="main__characters__span"> Numéro de la carte : </span><%= character.id %> </li>
+
+            <li class="main__character__features__list"> <span class="main__characters__span"> Première apparition : </span><%= character.first_apparition %> </li>
+
+            <li class="main__character__features__list"> <span class="main__characters__span"> Dernière apparition : </span><%= character.last_apparition %></li>
+
+            <li class="main__character__features__list"> <span class="main__characters__span"> Nombre d'apparition : </span> <%= character.total_of_apparition %></li>
+
+            <li class="main__character__features__list__last"> <span class="main__characters__span"> Type de personnage : </span> <%= character.type %></li>
+
+        </ul>
+     
+    </main>
+
+<!-- Je sais aussi que le footer va se répéter ! Alors on fait de même et on fout tout dans des partials appropriés pour faciliter la maintenance -->
+
+<%- include ('partials/footer') %>

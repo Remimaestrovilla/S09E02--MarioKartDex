@@ -2,7 +2,7 @@
 
 <%- include ('partials/header') %>
 
-    <p class="paragraph__explanation"> <%= title %> </p>
+    <p class="paragraph__explanation"> Voici toutes les cartes que vous avez mis en favori :</p>
 
     <!-- Désormais je vais faire en sorte de boucler sur tout les personnages de la licence, pour l'instant on ne veut que l'image et le nom -->
 
@@ -20,7 +20,9 @@
 
                     <p class="img__contenair__name"><%= character.name %></p>
 
-                     <a class="img__add__card" title="Ajouter au deck" href="/favorite/add/<%= character.id %>"><p class="img__add__card__explanation">+</p></a>
+                     <!-- <a class="img__add__card" title="Ajouter au deck" href="/favorite/add/<%= character.id %>"></a> -->
+
+                     <a class="img__remove__card" title="Supprimer du deck" href="/favorite/remove/<%= character.id %>"><p class="img__remove__card__explanation">-</p></a>
 
                      <p class="img__contenair__number"><%= character.id %></p>
                      
@@ -29,6 +31,7 @@
             </a>
 
         <% } %>
+
 
     </main>
 

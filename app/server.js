@@ -1,10 +1,22 @@
+// J'ai aussi besoin du dotenv ! Pour les variables d'environnement, je part le chercher
+
+const dotenv = require ('dotenv');
+
+// On a téléchargé le module express-session pour stocker des cartes en session, on part le chercher
+
+const session = require ('express-session');
+
 // Dans un premier temps, j'ai besoin de Express pour construire le serveur ! Je part le chercher !
 
 const express = require ('express');
 
-// J'ai aussi besoin du dotenv ! Pour les variables d'environnement, je part le chercher
+// Je configure mon environnement personnel de sorte à ce que le serveur s'ouvre sur le port que j'ai choisi par moi même 
 
-const dotenv = require ('dotenv');
+dotenv.config();
+
+// Il faut que j'assigne un port à mon application, on décide que par défaut, le site tournera sur le port 3003 
+
+const PORT = process.env.PORT || 3002;
 
 // J'aurai aussi besoin du router que j'ai crée un peu plus tot pour que tout soit d'equerre
 
@@ -18,14 +30,6 @@ const app = express();
 
 const path = require ('path');
 
-// Je configure mon environnement personnel de sorte à ce que le serveur s'ouvre sur le port que j'ai choisi par moi même 
-
-dotenv.config();
-
-// Il faut que j'assigne un port à mon application, on décide que par défaut, le site tournera sur le port 3003 
-
-const PORT = process.env.PORT || 3002;
-
 // Je vais maintenant chercher toutes mes vues ! Dans un premier temps, je précise que je cherche des views qui sont dans le dossier du même nom
 
 app.set('views', path.join(__dirname, './views'));
@@ -37,6 +41,26 @@ app.set('view engine', 'ejs');
 // Avec la méthode static d'express, je part chercher l'intégralité du CSS !
 
 app.use(express.static(path.join(__dirname, './static')));
+
+// Je met en place les règles que je veux pour mes sessions
+
+app.use(session({
+
+    secret: process.env.secret, // le "secret" qui sert à générer les identifiants de sessions uniques, je le met dans mon .env pour la sécurité 
+
+    resave: true, // sauvegarde automatique de la session à la fin de la requête
+
+    saveUninitialized: true, // créer une session pour l'internaute dans tous les cas, mais si elle est vide.
+
+    cookie: {
+
+        // des options pour le cookie qui contient l'identifiant de session comme sa durée de vie par exemple.
+
+        maxAge: 999999999999999999999999999999999999999 // Je met le temps de seconde pour chaque sessions, ca en fait du temps ! ^^
+
+    }
+
+}));
 
 // J'ai séparé le router et le server pour la séparation des concepts, mais il faut bien que les deux soient liées, je m'execute
 

@@ -1,11 +1,10 @@
-
 // Dans le fichier, je vais spécifier une variable d'environnement, du coup il faut que je part chercher mon dotenv
 
 const dotenv = require ('dotenv');
 
 // Je le configure comme sur le serveur
 
-dotenv.config()
+dotenv.config();
 
 // J'ai besoin de récuperer le module pg qui va me permettre de manipuler ma base de données au fur et à mesure du projet
 
